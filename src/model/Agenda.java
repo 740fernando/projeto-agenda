@@ -20,6 +20,7 @@ public class Agenda {
 	private NomeComparator nomeComparator = new NomeComparator();
 	private int proximoId= 1;
 	
+	
 	private Agenda() {
 		Contato c = null;
 		
@@ -43,6 +44,7 @@ public class Agenda {
 		c.setTelefone("5555-5555");
 		salvar(c);
 	}
+	//padrao singleton- garante que terá apenas um objeto em toda execução.
 	public static Agenda getInstance() {
 		if(instance == null) {
 			instance = new Agenda();
